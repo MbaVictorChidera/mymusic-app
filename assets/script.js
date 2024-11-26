@@ -65,15 +65,13 @@ progress.onchange = () => {
 };
 
 const handleNext = () => {
-  const updateSong = musicData[index];
-  currentIndex = (currentIndex + 1) % updateSong.length;
-
+  currentIndex = (currentIndex + 1) % musicData.length;
   populateDetails(currentIndex);
+  song.play();
 };
 
 const handlePrevious = () => {
-  const updateSong = musicData[index];
-  currentIndex = (currentIndex - 1) % updateSong.length;
-
+  currentIndex = (currentIndex - 1 + musicData.length) % musicData.length;
   populateDetails(currentIndex);
+  song.play();
 };
