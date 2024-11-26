@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music App</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mp-container">
+        <div class="music-details">
+          <div class="circle">
+            <img alt="" id="music-image" />
+          </div>
+          <br />
+
+          <p class="music-title" id="music-title"></p>
+
+          <p class="music-artist">
+            <small id="music-artist"></small>
+          </p>
+        </div>
+        <br />
+        <div class="music">
+          <audio
+            class="song"
+            id="song"
+            controls
+            autoplay="false"
+            type="audio/mpeg"
+          ></audio>
+
+          <div class="progress-container">
+            <input type="range" value="0" class="progress" id="progress" />
+            <small> <span id="timer">0:00 - 0:00</span></small>
+          </div>
+        </div>
+        <br />
+        <div class="music-controls">
+          <i
+            class="fa-solid fa-backward"
+            id="back-icon"
+            onclick="handlePrevious()"
+          ></i>
+          <i
+            class="fa-solid fa-play"
+            id="play-icon"
+            onclick="handlePlayPause()"
+          ></i>
+          <i
+            class="fa-solid fa-forward"
+            id="forward-icon"
+            onclick="handleNext()"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/data.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
